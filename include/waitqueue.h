@@ -20,7 +20,7 @@ template<typename T>
 class WaitQueue : public Use
 {
 public:
-	WaitQueue<T>()
+	WaitQueue()
 	{
 		//No canceled
 		cancel = false;
@@ -30,7 +30,7 @@ public:
 		pthread_cond_init(&cond,NULL);
 	}
 
-	virtual ~WaitQueue<T>()
+	virtual ~WaitQueue()
 	{
 		//Destroy mutex
 		pthread_mutex_destroy(&mutex);
